@@ -1,0 +1,20 @@
+{
+    "name": "webzera/slider",
+    "description": "This was created for admin slider control to view home page in frontend",
+    "type": "support",
+    "require": {
+        "illuminate/support": "^9.0@dev",
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "webzera",
+            "email": "esjohnzen@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
