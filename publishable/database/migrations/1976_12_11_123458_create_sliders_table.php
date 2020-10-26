@@ -15,7 +15,12 @@ class CreateSlidersTable extends Migration
     {
         Schema::create('sliders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('status', ['0', '1']);         
+            $table->string('name')->unique();
+            $table->string('caption');
+            $table->string('sub_caption');
+            $table->text('slider_image');
+            $table->text('link_url')->url();
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

@@ -2,7 +2,9 @@
 
 namespace Webzera\Slider;
 
+use Livewire\Livewire;
 use Illuminate\Support\ServiceProvider;
+use Webzera\Slider\Http\Livewire\LSlider;
 
 class SliderServiceProvider extends ServiceProvider
 {
@@ -12,9 +14,10 @@ class SliderServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
+    {        
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'slider');
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'admin');
+        Livewire::component('slider-component', LSlider::class);
     }
     
     /**
