@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div wire:ignore.self class="modal fade" id="addSliderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div wire:ignore.self class="modal fade" id="updateSliderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -8,8 +8,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form wire:submit.prevent="store" method="POST" enctype="multipart/form-data">
+      <form wire:submit.prevent="update" method="POST" enctype="multipart/form-data">
         @csrf
+        <input type="hidden" name="id" wire:model="id">
       <div class="modal-body">
             <div class="form-group">
                 <label for="slider_name">Name</label>
@@ -41,7 +42,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Add Slider</button>
+        <button type="submit" class="btn btn-primary">Edit Slider</button>
       </div>
       </form>
     </div>

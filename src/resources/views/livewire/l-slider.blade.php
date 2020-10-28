@@ -1,5 +1,6 @@
 <div>
 @include('admin::livewire.create')
+@include('admin::livewire.update')
 <section>
 <div class="container">
     <div class="row">
@@ -24,16 +25,19 @@
                             <th>Caption</th>
                             <th>Sub caption</th>
                             <th>Link Address</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($sliders as $slider)
                         <tr>
-                            <td>{{$slider->image}}</td>
+                            <td>{{$slider->slider_image}}</td>
                             <td>{{$slider->slider_name}}</td>
                             <td>{{$slider->caption}}</td>
                             <td>{{$slider->sub_caption}}</td>
                             <td>{{$slider->link_url}}</td>
+                            <td><button wire:click.prevent="edit({{$slider->id}})" data-toggle="modal" data-target="#updateSliderModal" type="button" class="btn btn-info">Edit</button></td>
+                            <td><button wire:click.prevent="delete({{$slider->id}})" type="button" class="btn btn-danger">Delete</button></td>
                         </tr>
                         @endforeach
                     </tbody>

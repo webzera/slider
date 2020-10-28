@@ -16,8 +16,12 @@
     @livewireScripts
 <script>
 window.livewire.on('sliderAdded', ()=>{
-$('#addSliderModal').modal('hide');
-})
+    $('#addSliderModal').modal('hide');
+});
+
+window.livewire.on('sliderUpdated', ()=>{
+    $('#updateSliderModal').modal('hide');
+});
 </script>
 </body>
 </html>
