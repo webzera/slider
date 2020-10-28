@@ -1,5 +1,5 @@
-<!-- Modal wire:ignore.self -->
-<div class="modal fade" id="addSliderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal -->
+<div wire:ignore.self class="modal fade" id="addSliderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -8,7 +8,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form wire:submit.prevent="store" action="#" method="POST" enctype="multipart/form-data">
+      <form wire:submit.prevent="store" method="POST" enctype="multipart/form-data">
         @csrf
       <div class="modal-body">
             <div class="form-group">
@@ -36,7 +36,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Add Slider</button>
+        <button type="submit" class="btn btn-primary">Add Slider</button>
       </div>
       </form>
     </div>
